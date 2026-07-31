@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
@@ -439,7 +449,8 @@
             { id: 'neptune', name: '滄海帝王', emoji: '🔱', maxHp: 4200, speed: 3.6, damage: 800, attackRange: 450, attackCd: 800, bulletSpeed: 12, reloadSpeed: 1200, ultRequirement: 6000, color: '#06b6d4', bulletColor: '#0891b2', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E6%B5%B7%E7%A5%9E.jpg', atkName: '潮汐蓄力波', atkDesc: '按住蓄力發射寬廣海浪(貫穿)，威力隨蓄力最高2倍。', ultName: '幻星鯊召喚', ultDesc: '召喚高血量幻星鯊，衝刺擊退並自動追擊撕咬擋子彈。' },
             { id: 'samira', name: '漠海舞姬', emoji: '💃', maxHp: 4000, speed: 4.0, damage: 500, attackRange: 350, attackCd: 500, bulletSpeed: 10, reloadSpeed: 1200, ultRequirement: 4000, color: '#eab308', bulletColor: '#fde047', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E6%BC%A0%E6%B5%B7%E8%88%9E%E5%A7%AC.jpg', atkName: '迴旋金沙刃', atkDesc: '擲出流沙月牙飛刃，去程貫穿敵人但無法穿牆，飛滿射程後自動折返並可穿牆貫穿。', ultName: '流沙漩渦', ultDesc: '原地展開華麗舞姿3秒(可移動+30%移速)，周圍180px範圍持續拉近敵人並造成傷害。' },
             { id: 'yorkie', name: '迷你芙', emoji: '🐶', maxHp: 3400, speed: 4.2, damage: 400, attackRange: 100, attackCd: 700, bulletSpeed: 0, reloadSpeed: 1600, ultRequirement: 100, color: '#d97706', bulletColor: '#fef08a', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E8%BF%B7%E4%BD%A0%E8%8A%99.png', atkName: '迷你抓抓', atkDesc: '自身360度近距離爪擊造成400傷害，並附加2秒芙芙印記。命中充能34%大招。', ultName: '德芙衝刺', ultDesc: '高速衝鋒(期間50%減傷)造成500傷害，命中印記目標造成600傷害並立即刷新大招！' },
-            { id: 'vampire', name: '血魅伯爵', emoji: '🍷', maxHp: 2800, speed: 3.6, damage: 320, attackRange: 350, attackCd: 550, bulletSpeed: 11, reloadSpeed: 1200, ultRequirement: 4000, color: '#881337', bulletColor: '#e11d48', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E5%90%B8%E8%A1%80%E9%AC%BC.png', atkName: '血浪汲取', atkDesc: '朝面朝方向45度扇形依序噴射5滴血，近距離280傷害，最遠距離衰減至140。每滴命中永久偷取對手1%生命上限。', ultName: '夜幕蝠化', ultDesc: '化身群蝠絕對無敵2秒且移速+35%，結束時爆發150px範圍1300傷害，60%轉為自身治療！' }
+            { id: 'vampire', name: '血魅伯爵', emoji: '🍷', maxHp: 2800, speed: 3.6, damage: 320, attackRange: 350, attackCd: 550, bulletSpeed: 11, reloadSpeed: 1200, ultRequirement: 4000, color: '#881337', bulletColor: '#e11d48', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E5%90%B8%E8%A1%80%E9%AC%BC.png', atkName: '血浪汲取', atkDesc: '朝面朝方向45度扇形依序噴射5滴血，近距離280傷害，最遠距離衰減至140。每滴命中永久偷取對手1%生命上限。', ultName: '夜幕蝠化', ultDesc: '化身群蝠絕對無敵2秒且移速+35%，結束時爆發150px範圍1300傷害，60%轉為自身治療！' },
+            { id: 'idol', name: '星光偶像', emoji: '🎤', maxHp: 3600, speed: 4.0, damage: 700, attackRange: 350, attackCd: 380, bulletSpeed: 10, reloadSpeed: 1100, ultRequirement: 3500, color: '#ec4899', bulletColor: '#f472b6', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E5%81%B6%E5%83%8F.jpg', atkName: '三拍子星光音符', atkDesc: '按1-2-3節奏連發！第1-2拍造成700傷害，第3拍觸發【高潮爆發】造成1050傷害！', ultName: '安可演唱會', ultDesc: '展開220px霓虹舞台3秒，瞬間魅惑範圍敵人1.3秒(無法攻擊+被迫走向自己)，並持續造成範圍傷害！' }
         ];
 
         const MAP_PRESETS = [
@@ -505,7 +516,7 @@
         let isSuddenDeath = false;
         let players = [], bullets = [], particles = [], powerCrystals = [], walls = [], bushes = [];
         let waters = [], sandPits = [];
-        let picnicZones = [], blizzardZones = [], prisonerCages = [], sharks = [], mageMeteors = []; 
+        let picnicZones = [], blizzardZones = [], prisonerCages = [], sharks = [], mageMeteors = [], stageZones = []; 
         let crystalSpawnTimer = 0;
         let selectedMapIndex = -1; // -1 表示隨機地圖
 
@@ -706,6 +717,7 @@
                 this.isChannelingVortex = false; this.vortexTimer = 0; this.vortexTickTimer = 0;
                 this.pawMarkTimer = 0; this.isYorkieDashing = false; this.yorkieUltCooldown = 0;
                 this.bonusMaxHp = 0; this.isBatForm = false; this.batFormTimer = 0; this.tempMaxHpPenalty = 0;
+                this.idolBeatCount = 0; this.charmTimer = 0; this.charmerId = null;
 
                 this.img = null;
                 if (brawler.imgUrl) {
@@ -811,6 +823,7 @@
                         this.isChannelingVortex = false; this.vortexTimer = 0; this.vortexTickTimer = 0; this.mageCastLockTimer = 0;
                         this.pawMarkTimer = 0; this.isYorkieDashing = false; this.yorkieUltCooldown = 0;
                         this.isBatForm = false; this.batFormTimer = 0;
+                        this.idolBeatCount = 0; this.charmTimer = 0; this.charmerId = null;
                     }
                     return;
                 }
@@ -822,6 +835,7 @@
                 if (this.rangerUltTimer > 0) { this.rangerUltTimer--; this.isRangerUlt = this.rangerUltTimer > 0; if (this.isRangerUlt && Math.random() > 0.5) createParticles(this.x, this.y, '#60a5fa', 1); }
                 if (this.revealTimer > 0) this.revealTimer--;
                 if (this.pawMarkTimer > 0) this.pawMarkTimer--;
+                if (this.charmTimer > 0) this.charmTimer--; else this.charmerId = null;
                 if (this.yorkieUltCooldown > 0) this.yorkieUltCooldown--;
                 if (this.isChannelingMageUlt) this.revealTimer = 20; // 法師詠唱大招期間持續暴露自身視野
 
@@ -1013,7 +1027,17 @@
                 if (this.isConfused) { let temp = kUp; kUp = kDown; kDown = temp; temp = kLeft; kLeft = kRight; kRight = temp; }
                 if (this.mageCastLockTimer > 0) { this.mageCastLockTimer--; kUp = kDown = kLeft = kRight = false; }
 
-                if (kUp) dy -= 1; if (kDown) dy += 1; if (kLeft) dx -= 1; if (kRight) dx += 1;
+                if (this.charmTimer > 0) {
+                    // 魅惑迷戀：忽略玩家原始輸入，無法攻擊/開大，並強制緩慢走向施法者
+                    kUp = kDown = kLeft = kRight = false; jAtk = false; kUlt = false;
+                    const charmer = players.find(p => p.id === this.charmerId);
+                    if (charmer && !charmer.isDead) {
+                        const cdx = charmer.x - this.x, cdy = charmer.y - this.y, cdist = Math.hypot(cdx, cdy) || 1;
+                        if (cdist > 30) { dx = cdx / cdist; dy = cdy / cdist; }
+                    }
+                } else {
+                    if (kUp) dy -= 1; if (kDown) dy += 1; if (kLeft) dx -= 1; if (kRight) dx += 1;
+                }
 
                 if (dx !== 0 || dy !== 0) {
                     if (this.isChannelingMageUlt) {
@@ -1038,6 +1062,7 @@
                     if (this.picnicSlowTimer > 0) { slowMultiplier -= 0.25; this.picnicSlowTimer--; }
                     if (isInsideBlizzardSlow) slowMultiplier -= 0.40;
                     if (isInsideSand) slowMultiplier -= 0.25;
+                    if (this.charmTimer > 0) slowMultiplier = 0.4; // 魅惑迷戀：強制緩慢走向施法者
                     moveSpeed *= Math.max(0.2, slowMultiplier);
                     
                     const len = Math.sqrt(dx*dx + dy*dy);
@@ -1198,12 +1223,12 @@
                                 if (!blocked) {
                                     if (entity.hp !== undefined && entity.id) {
                                         entity.takeDamage(this.damage, this.id, true, false);
-                                        entity.pawMarkTimer = 120; // 芙芙印記持續1.5秒
+                                        entity.pawMarkTimer = 120; // 芙芙印記持續2秒
                                         createFloatingText(entity.x, entity.y - 45, "🐾 芙芙印記!", "#d97706");
                                     } else if (entity.hp !== undefined && !entity.id) {
                                         entity.hp -= this.damage; playSound('hit');
                                     }
-                                    this.ultCharge = Math.min(100, this.ultCharge + 34); // 每次命中固定充能34%
+                                    this.ultCharge = Math.min(100, this.ultCharge + 34); // 每次命中固定充能25%
                                     createParticles(entity.x, entity.y, '#fef08a', 12);
                                 }
                             }
@@ -1237,6 +1262,16 @@
                             };
                             if (i === 0) fireDrop(); else setTimeout(fireDrop, i * 50);
                         }
+                        playSound('shoot');
+                    } else if (this.brawler.id === 'idol') {
+                        const beatIndex = this.idolBeatCount % 3; // 0=第1拍, 1=第2拍, 2=第3拍
+                        if (beatIndex < 2) {
+                            bullets.push(new Bullet(this.id, this.x, this.y, this.angle, 10, this.damage, 400, this.brawler.bulletColor, 9, false, 'star_note'));
+                        } else {
+                            bullets.push(new Bullet(this.id, this.x, this.y, this.angle, 12, this.damage * 1.5, 400, '#facc15', 14, false, 'star_note_big'));
+                            createFloatingText(this.x, this.y - 45, "✨ 高潮爆發!", "#facc15");
+                        }
+                        this.idolBeatCount = (beatIndex + 1) % 3;
                         playSound('shoot');
                     }
                 }
@@ -1353,6 +1388,19 @@
                         this.invincibilityTimer = 120; // 絕對無敵，免疫所有傷害/子彈/控制效果
                         createFloatingText(this.x, this.y - 65, "🦇 夜幕蝠化!", "#881337");
                         createParticles(this.x, this.y, '#881337', 25);
+                    } else if (this.brawler.id === 'idol') {
+                        const stageRadius = 220;
+                        createFloatingText(this.x, this.y - 65, "🎤 安可演唱會!", "#ec4899");
+                        createParticles(this.x, this.y, '#f472b6', 30);
+                        stageZones.push({ ownerId: this.id, x: this.x, y: this.y, radius: stageRadius, life: 180 });
+                        // 舞台展開瞬間，範圍內敵人強制魅惑迷戀 1.3 秒
+                        players.forEach(p => {
+                            if (p.id !== this.id && !p.isDead && p.invincibilityTimer <= 0 && Math.hypot(p.x - this.x, p.y - this.y) < p.radius + stageRadius) {
+                                p.charmTimer = 78; p.charmerId = this.id;
+                                createFloatingText(p.x, p.y - 45, "💖 魅惑迷戀!", "#ec4899");
+                                createParticles(p.x, p.y, '#f472b6', 12);
+                            }
+                        });
                     }
                 }
             }
@@ -1627,6 +1675,7 @@
                 for (let i = 0; i < 3; i++) { ctx.fillStyle = i < this.ammo ? '#f59e0b' : '#475569'; ctx.fillRect(-barW/2 + i * 18, barYOffset - 8, 14, 4); }
                 if (this.freezeValue > 0) { ctx.fillStyle = "rgba(56, 189, 248, 0.9)"; ctx.font = "bold 10px Arial"; ctx.textAlign = "center"; ctx.fillText(`❄️ ${Math.floor(this.freezeValue)}%`, 0, barYOffset - 14); }
                 if (this.pawMarkTimer > 0) { ctx.font = "42px Arial"; ctx.textAlign = "center"; ctx.fillText("🐾", 0, barYOffset - 38); }
+                if (this.charmTimer > 0) { ctx.font = "22px Arial"; ctx.textAlign = "center"; ctx.fillText("💖", 0, barYOffset - 30); }
 
                 // 大招已集滿：細緻金色呼吸光環提醒 (縮放幅度小，避免草叢中過於顯眼)
                 if (this.ultCharge >= 100 && !this.isDead) {
@@ -1868,6 +1917,26 @@
                     ctx.fillStyle = 'rgba(255,255,255,0.35)';
                     ctx.beginPath(); ctx.ellipse(-this.radius * 0.2, -this.radius * 0.1, this.radius * 0.22, this.radius * 0.32, -0.3, 0, Math.PI * 2); ctx.fill();
                     ctx.restore();
+                    return;
+                }
+                if (this.effect === 'star_note' || this.effect === 'star_note_big') {
+                    // 星光偶像專屬：星光音符 (第3拍為金紫色放大版)
+                    const isBig = this.effect === 'star_note_big';
+                    ctx.save(); ctx.translate(this.x, this.y); ctx.rotate(Date.now() / (isBig ? 90 : 140));
+                    ctx.shadowColor = isBig ? '#facc15' : '#f472b6'; ctx.shadowBlur = isBig ? 14 : 8;
+                    ctx.fillStyle = isBig ? '#facc15' : '#f472b6';
+                    ctx.strokeStyle = isBig ? '#a855f7' : '#ec4899'; ctx.lineWidth = isBig ? 2.5 : 1.5;
+                    const spikes = 5, outerR = this.radius, innerR = this.radius * 0.42;
+                    ctx.beginPath();
+                    for (let s = 0; s < spikes * 2; s++) {
+                        const r = s % 2 === 0 ? outerR : innerR;
+                        const ang = (s / (spikes * 2)) * Math.PI * 2 - Math.PI / 2;
+                        const px = Math.cos(ang) * r, py = Math.sin(ang) * r;
+                        if (s === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+                    }
+                    ctx.closePath(); ctx.fill(); ctx.stroke();
+                    ctx.restore();
+                    if (isBig && Math.random() < 0.5) createParticles(this.x, this.y, '#facc15', 1);
                     return;
                 }
                 if (this.effect === 'explode') {
@@ -2150,6 +2219,31 @@
                 players.forEach(p => { if (!p.isDead && Math.hypot(p.x - z.x, p.y - z.y) < p.radius + z.radius && p.id !== z.ownerId && z.life % 30 === 0) { const zOwner = players.find(pl => pl.id === z.ownerId); const zDmgMult = zOwner ? (1 + 0.02 * zOwner.crystalsCollected) : 1; p.takeDamage(150 * zDmgMult, z.ownerId, true, 0.10); if (!p.isStunned) p.freezeValue = Math.min(100, p.freezeValue + 34); createParticles(p.x, p.y, "#38bdf8", 6); } });
             }); blizzardZones = blizzardZones.filter(z => z.life > 0);
 
+            stageZones.forEach(z => {
+                z.life--;
+                ctx.save();
+                ctx.beginPath(); ctx.arc(z.x, z.y, z.radius, 0, Math.PI * 2);
+                ctx.fillStyle = "rgba(236, 72, 153, 0.10)"; ctx.fill();
+                ctx.strokeStyle = "rgba(244, 114, 182, 0.65)"; ctx.lineWidth = 3; ctx.setLineDash([10, 8]); ctx.stroke(); ctx.setLineDash([]);
+                ctx.clip();
+                for (let a = 0; a < 8; a++) {
+                    const ang = (a / 8) * Math.PI * 2 + Date.now() / 1000;
+                    ctx.strokeStyle = a % 2 === 0 ? "rgba(244, 114, 182, 0.15)" : "rgba(250, 204, 21, 0.12)";
+                    ctx.lineWidth = 22;
+                    ctx.beginPath(); ctx.moveTo(z.x, z.y); ctx.lineTo(z.x + Math.cos(ang) * z.radius, z.y + Math.sin(ang) * z.radius); ctx.stroke();
+                }
+                ctx.restore();
+                if (z.life % 12 === 0) {
+                    const deco = ['💖', '✨', '🎵'][Math.floor(Math.random() * 3)];
+                    particles.push({ type: 'text', x: z.x + Math.cos(Math.random() * Math.PI * 2) * (Math.random() * (z.radius - 20)), y: z.y + Math.sin(Math.random() * Math.PI * 2) * (Math.random() * (z.radius - 20)), text: deco, color: '#ffffff', alpha: 1, vy: -0.6, life: 55 });
+                }
+                if (z.life % 15 === 0) {
+                    const zOwner = players.find(pl => pl.id === z.ownerId);
+                    const zDmgMult = zOwner ? (1 + 0.02 * zOwner.crystalsCollected) : 1;
+                    players.forEach(p => { if (!p.isDead && p.id !== z.ownerId && p.invincibilityTimer <= 0 && Math.hypot(p.x - z.x, p.y - z.y) < p.radius + z.radius) { p.takeDamage(90 * zDmgMult, z.ownerId, true, 0.2); createParticles(p.x, p.y, "#f472b6", 6); } });
+                }
+            }); stageZones = stageZones.filter(z => z.life > 0);
+
             // 法師預警流星處理
             mageMeteors.forEach(m => {
                 m.delay--;
@@ -2289,7 +2383,7 @@
             document.getElementById('hud-sub-banner').className = "text-[10px] text-emerald-400 mt-1 flex items-center gap-1 justify-center animate-pulse";
 
             players = [new Player('p1', b1, 100, BASE_HEIGHT / 2, 0, '#3b82f6'), new Player('p2', b2, BASE_WIDTH - 100, BASE_HEIGHT / 2, Math.PI, '#ef4444')];
-            bullets = []; particles = []; powerCrystals = []; picnicZones = []; blizzardZones = []; prisonerCages = []; sharks = []; mageMeteors = [];
+            bullets = []; particles = []; powerCrystals = []; picnicZones = []; blizzardZones = []; prisonerCages = []; sharks = []; mageMeteors = []; stageZones = [];
 
             // 重置戰場播報系統狀態
             firstBloodDone = false; announcerQueue = []; announcerBusy = false;
@@ -2365,4 +2459,5 @@
         renderMapSelector();
     </script>
 </body>
+</html>
 </html>
