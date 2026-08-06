@@ -439,8 +439,9 @@
             { id: 'neptune', name: '滄海帝王', emoji: '🔱', maxHp: 4200, speed: 3.6, damage: 800, attackRange: 450, attackCd: 800, bulletSpeed: 12, reloadSpeed: 1200, ultRequirement: 6000, color: '#06b6d4', bulletColor: '#0891b2', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E6%B5%B7%E7%A5%9E.jpg', atkName: '潮汐蓄力波', atkDesc: '按住蓄力發射寬廣海浪(貫穿)，威力隨蓄力最高2倍。', ultName: '幻星鯊召喚', ultDesc: '召喚高血量幻星鯊，衝刺擊退並自動追擊撕咬擋子彈。' },
             { id: 'samira', name: '漠海舞姬', emoji: '💃', maxHp: 4000, speed: 4.0, damage: 500, attackRange: 350, attackCd: 500, bulletSpeed: 10, reloadSpeed: 1200, ultRequirement: 4000, color: '#eab308', bulletColor: '#fde047', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E6%BC%A0%E6%B5%B7%E8%88%9E%E5%A7%AC.jpg', atkName: '迴旋金沙刃', atkDesc: '擲出流沙月牙飛刃，去程貫穿敵人但無法穿牆，飛滿射程後自動折返並可穿牆貫穿。', ultName: '流沙漩渦', ultDesc: '原地展開華麗舞姿3秒(可移動+30%移速)，周圍180px範圍持續拉近敵人並造成傷害。' },
             { id: 'yorkie', name: '迷你芙', emoji: '🐶', maxHp: 3400, speed: 4.2, damage: 400, attackRange: 100, attackCd: 700, bulletSpeed: 0, reloadSpeed: 1600, ultRequirement: 100, color: '#d97706', bulletColor: '#fef08a', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E8%BF%B7%E4%BD%A0%E8%8A%99.png', atkName: '迷你抓抓', atkDesc: '自身360度近距離爪擊造成400傷害，並附加2秒芙芙印記。命中充能34%大招。', ultName: '德芙衝刺', ultDesc: '高速衝鋒(期間50%減傷)造成500傷害，命中印記目標造成600傷害並立即刷新大招！' },
-            { id: 'vampire', name: '血魅伯爵', emoji: '🍷', maxHp: 2800, speed: 3.6, damage: 320, attackRange: 350, attackCd: 550, bulletSpeed: 11, reloadSpeed: 1200, ultRequirement: 4000, color: '#881337', bulletColor: '#e11d48', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E5%90%B8%E8%A1%80%E9%AC%BC.png', atkName: '血浪汲取', atkDesc: '朝面朝方向45度扇形依序噴射5滴血，近距離280傷害，最遠距離衰減至140。每滴命中永久偷取對手1%生命上限。', ultName: '夜幕蝠化', ultDesc: '化身群蝠絕對無敵2秒且移速+35%，結束時爆發150px範圍1300傷害，60%轉為自身治療！' },
-            { id: 'idol', name: '星光偶像', emoji: '🎤', maxHp: 3600, speed: 4.0, damage: 700, attackRange: 350, attackCd: 380, bulletSpeed: 10, reloadSpeed: 1100, ultRequirement: 3500, color: '#ec4899', bulletColor: '#f472b6', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E5%81%B6%E5%83%8F.jpg', atkName: '三拍子星光音符', atkDesc: '按1-2-3節奏連發！第1-2拍造成700傷害，第3拍觸發【高潮爆發】造成1050傷害！', ultName: '安可演唱會', ultDesc: '展開220px霓虹舞台3秒，瞬間魅惑範圍敵人1.3秒(無法攻擊+被迫走向自己)，並持續造成範圍傷害！' }
+            { id: 'vampire', name: '血魅伯爵', emoji: '🍷', maxHp: 2800, speed: 3.6, damage: 320, attackRange: 350, attackCd: 550, bulletSpeed: 11, reloadSpeed: 1200, ultRequirement: 2200, color: '#881337', bulletColor: '#e11d48', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E5%90%B8%E8%A1%80%E9%AC%BC.png', atkName: '血浪汲取', atkDesc: '朝面朝方向45度扇形依序噴射5滴血，近距離320傷害，最遠距離衰減至160。每滴命中永久偷取對手1%生命上限。', ultName: '夜幕蝠化', ultDesc: '化身群蝠絕對無敵2秒且移速+35%，結束時爆發150px範圍1300傷害，60%轉為自身治療！' },
+            { id: 'idol', name: '星光偶像', emoji: '🎤', maxHp: 3600, speed: 4.0, damage: 700, attackRange: 350, attackCd: 380, bulletSpeed: 10, reloadSpeed: 1100, ultRequirement: 3500, color: '#ec4899', bulletColor: '#f472b6', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E5%81%B6%E5%83%8F.jpg', atkName: '三拍子星光音符', atkDesc: '按1-2-3節奏連發！第1-2拍造成700傷害，第3拍觸發【高潮爆發】造成1050傷害！', ultName: '安可演唱會', ultDesc: '展開220px霓虹舞台3秒，瞬間魅惑範圍敵人1.3秒(無法攻擊+被迫走向自己)，並持續造成範圍傷害！' },
+            { id: 'paladin', name: '聖光騎士', emoji: '⚔️', maxHp: 5200, speed: 3.3, damage: 880, attackRange: 120, attackCd: 700, bulletSpeed: 0, reloadSpeed: 1100, ultRequirement: 4800, color: '#eab308', bulletColor: '#fef08a', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E8%81%96%E5%85%89%E9%A8%8E%E5%A3%AB.jpg', atkName: '聖劍斬擊', atkDesc: '面朝180度扇形橫掃880傷害(先0.4秒警示再劈砍)。每命中1次獲得1層聖盾餘暉(疊加3層，各+5%減傷+10%增傷)。', ultName: '守護之盾', ultDesc: '舉盾2.5秒正面免疫子彈與衝刺(移速-50%)！結束後4秒內普攻改為聖光劍氣(1000+50%吸收傷害)！' }
         ];
 
         const MAP_PRESETS = [
@@ -708,6 +709,10 @@
                 this.pawMarkTimer = 0; this.isYorkieDashing = false; this.yorkieUltCooldown = 0;
                 this.bonusMaxHp = 0; this.isBatForm = false; this.batFormTimer = 0; this.tempMaxHpPenalty = 0;
                 this.idolBeatCount = 0; this.charmTimer = 0; this.charmerId = null;
+                this.holyStacks = 0;
+                this.isSwordWindup = false; this.swordWindupTimer = 0; this.isSwordSwinging = false; this.swordSwingTimer = 0; this.swordSwingAngle = 0;
+                this.isShieldUp = false; this.shieldTimer = 0; this.shieldAbsorbedDmg = 0;
+                this.aegisCounterTimer = 0; this.aegisCounterDamage = 0;
 
                 this.img = null;
                 if (brawler.imgUrl) {
@@ -718,7 +723,7 @@
                 this.updateStatsFromCrystals(0);
             }
 
-            get damage() { let dmg = this.brawler.damage + this.extraAtk; if (this.isRangerUlt) dmg *= 1.3; return dmg; }
+            get damage() { let dmg = this.brawler.damage + this.extraAtk; if (this.isRangerUlt) dmg *= 1.3; if (this.brawler.id === 'paladin') dmg *= (1 + 0.10 * this.holyStacks); return dmg; }
 
             updateStatsFromCrystals(healAmount = 0) {
                 this.extraAtk = this.brawler.damage * 0.02 * this.crystalsCollected;
@@ -735,6 +740,7 @@
                 if (this.damageReductionTimer > 0) amount *= 0.75; 
                 if (this.isChannelingVortex) amount *= 0.7; // 流沙漩渦期間 30% 減傷
                 if (this.isYorkieDashing) amount *= 0.5; // 德芙衝刺期間 50% 減傷
+                if (this.brawler.id === 'paladin' && this.holyStacks > 0) amount *= (1 - 0.05 * this.holyStacks); // 聖盾餘暉常駐減傷
                 
                 this.hp = Math.floor(this.hp - amount);
                 if (triggerImmunity) this.lastDamageTime = Date.now(); 
@@ -814,6 +820,8 @@
                         this.pawMarkTimer = 0; this.isYorkieDashing = false; this.yorkieUltCooldown = 0;
                         this.isBatForm = false; this.batFormTimer = 0;
                         this.idolBeatCount = 0; this.charmTimer = 0; this.charmerId = null;
+                        this.holyStacks = 0; this.isSwordWindup = false; this.swordWindupTimer = 0; this.isSwordSwinging = false; this.swordSwingTimer = 0;
+                        this.isShieldUp = false; this.shieldTimer = 0; this.shieldAbsorbedDmg = 0; this.aegisCounterTimer = 0; this.aegisCounterDamage = 0;
                     }
                     return;
                 }
@@ -909,10 +917,54 @@
                     }
                 }
 
+                // 聖光騎士：聖劍斬擊警示 → 揮砍 狀態機
+                if (this.isSwordWindup) {
+                    this.swordWindupTimer--;
+                    if (this.swordWindupTimer <= 0) {
+                        this.isSwordWindup = false; this.isSwordSwinging = true; this.swordSwingTimer = 12; // 200ms 揮砍
+                        this.swordSwingAngle = this.angle;
+                        const hitRadius = this.brawler.attackRange;
+                        const targets = [];
+                        players.forEach(p => { if (p.id !== this.id && !p.isDead && p.invincibilityTimer <= 0) targets.push(p); });
+                        sharks.forEach(s => { if (s.ownerId !== this.id) targets.push(s); });
+                        targets.forEach(entity => {
+                            const edx = entity.x - this.x, edy = entity.y - this.y, dist = Math.hypot(edx, edy);
+                            if (dist < hitRadius + entity.radius) {
+                                let angDiff = Math.atan2(Math.sin(Math.atan2(edy, edx) - this.swordSwingAngle), Math.cos(Math.atan2(edy, edx) - this.swordSwingAngle));
+                                if (Math.abs(angDiff) <= Math.PI / 2 && !checkMeleeLineBlocked(this.x, this.y, entity.x, entity.y)) {
+                                    if (entity.hp !== undefined && entity.id) {
+                                        entity.takeDamage(this.damage, this.id, true, 1.0);
+                                    } else if (entity.hp !== undefined && !entity.id) {
+                                        entity.hp -= this.damage; playSound('hit');
+                                    }
+                                    this.holyStacks = Math.min(3, this.holyStacks + 1); // 命中獲得聖盾餘暉
+                                    createParticles(entity.x, entity.y, '#fef08a', 12);
+                                }
+                            }
+                        });
+                        createParticles(this.x, this.y, '#fef08a', 4);
+                        playSound('hit');
+                    }
+                }
+                if (this.isSwordSwinging) { this.swordSwingTimer--; if (this.swordSwingTimer <= 0) this.isSwordSwinging = false; }
+
+                // 聖光騎士：舉盾倒數 → 蓄能反擊窗口
+                if (this.isShieldUp) {
+                    this.shieldTimer--;
+                    if (this.shieldTimer <= 0) {
+                        this.isShieldUp = false;
+                        this.aegisCounterTimer = 240; // 反擊窗口 4 秒
+                        this.aegisCounterDamage = 1000 + this.shieldAbsorbedDmg * 0.5;
+                        createFloatingText(this.x, this.y - 55, `⚔️ 蓄能反擊! (+${Math.round(this.shieldAbsorbedDmg * 0.5)})`, "#fef08a");
+                    }
+                }
+                if (this.aegisCounterTimer > 0) { this.aegisCounterTimer--; if (this.aegisCounterTimer <= 0) this.aegisCounterDamage = 0; }
+
                 const isRegenActive = (Date.now() - this.lastDamageTime > 3500) && (Date.now() - this.lastShootTime > 3500);
                 if (isRegenActive) {
                     if (this.hp < this.maxHp) this.hp = Math.min(this.maxHp, this.hp + this.maxHp * 0.15 / 60);
                     this.freezeValue = Math.max(0, this.freezeValue - 0.25);
+                    if (this.holyStacks > 0) this.holyStacks = 0; // 離開戰鬥重置聖盾餘暉
                 }
 
                 if (this.ammo < 3 && Date.now() - this.lastReloadTime > this.brawler.reloadSpeed) { this.ammo++; this.lastReloadTime = Date.now(); }
@@ -962,7 +1014,10 @@
                             });
                             
                             if (dist < enemy.radius + sprayWidth && !blockedByWall && !blockedByCage) {
-                                if (this.brawler.id === 'crafter') {
+                                if (enemy.isShieldUp && isFrontalHit(enemy, this.x, this.y)) {
+                                    enemy.shieldAbsorbedDmg += this.damage;
+                                    createParticles(enemy.x, enemy.y, "#fef08a", 6);
+                                } else if (this.brawler.id === 'crafter') {
                                     enemy.takeDamage(this.damage, this.id, true, 1.0);
                                     enemy.syrupSlowTimer = 60; 
                                     const healAmount = Math.floor(60 * (1 + 0.02 * this.crystalsCollected));
@@ -1039,6 +1094,7 @@
                     let moveSpeed = this.speed; if (this.isRangerUlt) moveSpeed = 5.0; 
                     if (this.isChannelingVortex) moveSpeed *= 1.3;
                     if (this.isBatForm) moveSpeed *= 1.35;
+                    if (this.isShieldUp) moveSpeed *= 0.5;
                     if (this.isCharging) moveSpeed *= 0.6; 
                     
                     let isInsideBlizzardSlow = false;
@@ -1123,7 +1179,7 @@
             }
 
             shootNormal() {
-                if (this.isSpraying || this.isChannelingVortex || this.isBatForm) return;
+                if (this.isSpraying || this.isChannelingVortex || this.isBatForm || this.isShieldUp || this.isSwordWindup || this.isSwordSwinging) return;
                 const now = Date.now();
                 if (this.ammo > 0 && now - this.lastShootTime > this.brawler.attackCd) {
                     this.ammo--; this.lastShootTime = now; this.lastReloadTime = now; playSound('shoot');
@@ -1218,7 +1274,7 @@
                                     } else if (entity.hp !== undefined && !entity.id) {
                                         entity.hp -= this.damage; playSound('hit');
                                     }
-                                    this.ultCharge = Math.min(100, this.ultCharge + 34); // 每次命中固定充能25%
+                                    this.ultCharge = Math.min(100, this.ultCharge + 34); // 每次命中固定充能34%
                                     createParticles(entity.x, entity.y, '#fef08a', 12);
                                 }
                             }
@@ -1263,6 +1319,16 @@
                         }
                         this.idolBeatCount = (beatIndex + 1) % 3;
                         playSound('shoot');
+                    } else if (this.brawler.id === 'paladin') {
+                        if (this.aegisCounterTimer > 0) {
+                            // 蓄能反擊窗口內：普攻改為聖光劍氣 (貫穿障礙物，寬度+50%，僅限一發)
+                            bullets.push(new Bullet(this.id, this.x, this.y, this.angle, 14, this.aegisCounterDamage, 400, this.brawler.bulletColor, 30, true, 'holy_wave'));
+                            createFloatingText(this.x, this.y - 45, "⚔️ 聖光劍氣!", "#fef08a");
+                            this.aegisCounterTimer = 0; this.aegisCounterDamage = 0; // 發動後立即結束視窗，僅能發動一次
+                        } else {
+                            // 一般攻擊：0.4秒警示後才揮砍
+                            this.isSwordWindup = true; this.swordWindupTimer = 24; this.swordSwingAngle = this.angle;
+                        }
                     }
                 }
             }
@@ -1297,8 +1363,14 @@
                             walls = walls.filter(w => { if (circleRectCollide(this.x, this.y, this.radius + 15, w) && w.isDestructible) { createParticles(w.x + w.w/2, w.y + w.h/2, '#78350f', 12); return false; } return true; });
                             const enemy = players.find(p => p.id !== this.id);
                             if (enemy && !enemy.isDead && enemy.invincibilityTimer <= 0 && Math.hypot(this.x - enemy.x, this.y - enemy.y) < enemy.radius + this.radius + 15) {
-                                enemy.takeDamage(this.damage * 0.25, this.id, true, 0.15); createParticles(enemy.x, enemy.y, '#c084fc', 20);
-                                { const pushX = enemy.x + Math.cos(angle) * 40, pushY = enemy.y + Math.sin(angle) * 40; if (!isPointInAnyWater(pushX, pushY)) { enemy.x = pushX; enemy.y = pushY; } }
+                                if (enemy.isShieldUp && isFrontalHit(enemy, this.x, this.y)) {
+                                    enemy.shieldAbsorbedDmg += this.damage * 0.25;
+                                    createParticles(enemy.x, enemy.y, '#fef08a', 16); playSound('hit');
+                                    clearInterval(interval);
+                                } else {
+                                    enemy.takeDamage(this.damage * 0.25, this.id, true, 0.15); createParticles(enemy.x, enemy.y, '#c084fc', 20);
+                                    { const pushX = enemy.x + Math.cos(angle) * 40, pushY = enemy.y + Math.sin(angle) * 40; if (!isPointInAnyWater(pushX, pushY)) { enemy.x = pushX; enemy.y = pushY; } }
+                                }
                             }
                             createParticles(this.x, this.y, '#c084fc', 3); currentDist += step; if (currentDist >= dashDist) clearInterval(interval);
                         }, 16);
@@ -1324,7 +1396,13 @@
                             this.x = Math.max(this.radius, Math.min(BASE_WIDTH - this.radius, nextX)); this.y = Math.max(this.radius, Math.min(BASE_HEIGHT - this.radius, nextY));
                             const enemy = players.find(p => p.id !== this.id);
                             if (enemy && !enemy.isDead && enemy.invincibilityTimer <= 0 && Math.hypot(this.x - enemy.x, this.y - enemy.y) < enemy.radius + this.radius) {
-                                enemy.takeDamage(this.damage * 0.75, this.id, true, 0.15); clearInterval(interval); triggerPrisonerCage(this.x, this.y, this.id); return;
+                                if (enemy.isShieldUp && isFrontalHit(enemy, this.x, this.y)) {
+                                    enemy.shieldAbsorbedDmg += this.damage * 0.75;
+                                    createParticles(enemy.x, enemy.y, '#fef08a', 16); playSound('hit');
+                                } else {
+                                    enemy.takeDamage(this.damage * 0.75, this.id, true, 0.15);
+                                }
+                                clearInterval(interval); triggerPrisonerCage(this.x, this.y, this.id); return;
                             }
                             createParticles(this.x, this.y, '#57534e', 3); currentDist += step;
                             if (currentDist >= dashDist) { clearInterval(interval); triggerPrisonerCage(this.x, this.y, this.id); }
@@ -1339,6 +1417,7 @@
                         this.vortexTickTimer = 15; // 每 0.25 秒 (15 幀) 觸發一次傷害
                         createFloatingText(this.x, this.y - 65, "🌪️ 流沙漩渦!", "#eab308");
                         createParticles(this.x, this.y, '#eab308', 25);
+                        
                     } else if (this.brawler.id === 'yorkie') {
                         this.isYorkieDashing = true;
                         this.yorkieUltCooldown = 20; // 大招使用間隔縮短，避免衝刺結束瞬間又立即觸發
@@ -1391,6 +1470,13 @@
                                 createParticles(p.x, p.y, '#f472b6', 12);
                             }
                         });
+                    } else if (this.brawler.id === 'paladin') {
+                        this.isShieldUp = true;
+                        this.shieldTimer = 150; // 舉盾防禦 2.5 秒
+                        this.shieldAbsorbedDmg = 0;
+                        this.isSwordWindup = false; this.isSwordSwinging = false;
+                        createFloatingText(this.x, this.y - 65, "🛡️ 守護之盾!", "#eab308");
+                        createParticles(this.x, this.y, '#fef08a', 25);
                     }
                 }
             }
@@ -1578,6 +1664,88 @@
                     }
                     ctx.restore();
                     if (Math.random() < 0.4) createParticles(this.x, this.y, '#60a5fa', 1);
+                }
+
+                // 聖光騎士：聖劍斬擊警戒扇形 (0.4秒警示，讓敵人能看見並閃避)
+                if (this.isSwordWindup) {
+                    const windupRatio = 1 - this.swordWindupTimer / 24;
+                    ctx.save(); ctx.rotate(this.swordSwingAngle);
+                    ctx.beginPath();
+                    ctx.moveTo(0, 0);
+                    ctx.arc(0, 0, this.brawler.attackRange, -Math.PI / 2, Math.PI / 2);
+                    ctx.closePath();
+                    ctx.fillStyle = `rgba(250, 204, 21, ${0.12 + 0.18 * windupRatio})`;
+                    ctx.fill();
+                    ctx.strokeStyle = `rgba(250, 204, 21, ${0.5 + 0.4 * windupRatio})`;
+                    ctx.lineWidth = 2.5;
+                    ctx.stroke();
+                    ctx.restore();
+                }
+
+                // 聖光騎士：聖劍由左至右的劈砍掃描 (200ms 揮砍時間)
+                if (this.isSwordSwinging) {
+                    const swingProgress = 1 - (this.swordSwingTimer / 12); // 0(最左) → 1(最右)
+                    const sweepAngle = -Math.PI / 2 + swingProgress * Math.PI;
+                    const hitRadius = this.brawler.attackRange;
+                    ctx.save(); ctx.rotate(this.swordSwingAngle);
+                    // 已劈過的扇形殘影：從左側逐漸擴展到目前刀鋒位置
+                    ctx.beginPath();
+                    ctx.moveTo(0, 0);
+                    ctx.arc(0, 0, hitRadius, -Math.PI / 2, sweepAngle);
+                    ctx.closePath();
+                    ctx.fillStyle = 'rgba(250, 204, 21, 0.28)';
+                    ctx.fill();
+                    // 劍鋒亮線：目前掃描位置
+                    ctx.strokeStyle = 'rgba(255, 255, 255, 0.95)'; ctx.lineWidth = 6; ctx.lineCap = 'round';
+                    ctx.shadowColor = '#fef08a'; ctx.shadowBlur = 16;
+                    ctx.beginPath();
+                    ctx.moveTo(0, 0);
+                    ctx.lineTo(Math.cos(sweepAngle) * hitRadius, Math.sin(sweepAngle) * hitRadius);
+                    ctx.stroke();
+                    ctx.shadowBlur = 0;
+                    ctx.strokeStyle = 'rgba(250, 204, 21, 0.6)'; ctx.lineWidth = 14; ctx.lineCap = 'round';
+                    ctx.beginPath();
+                    ctx.moveTo(0, 0);
+                    ctx.lineTo(Math.cos(sweepAngle) * hitRadius, Math.sin(sweepAngle) * hitRadius);
+                    ctx.stroke();
+                    ctx.restore();
+                }
+
+                // 聖光騎士：聖盾餘暉層數光環
+                if (this.holyStacks > 0) {
+                    ctx.save();
+                    for (let i = 0; i < this.holyStacks; i++) {
+                        ctx.beginPath();
+                        ctx.arc(0, 0, this.radius + 7 + i * 6, 0, Math.PI * 2);
+                        ctx.strokeStyle = `rgba(250, 204, 21, ${0.85 - i * 0.15})`;
+                        ctx.lineWidth = 2;
+                        ctx.shadowColor = '#eab308'; ctx.shadowBlur = 6;
+                        ctx.stroke();
+                    }
+                    ctx.restore();
+                }
+
+                // 聖光騎士：舉盾防禦特效 (尺寸加大100%)
+                if (this.isShieldUp) {
+                    ctx.save(); ctx.rotate(this.angle);
+                    const shieldPulse = 1 + Math.sin(Date.now() / 150) * 0.05;
+                    const shieldR = (this.radius + 10) * 2 * shieldPulse;
+                    ctx.beginPath();
+                    ctx.arc(0, 0, shieldR, -Math.PI / 2.1, Math.PI / 2.1);
+                    ctx.strokeStyle = 'rgba(250, 204, 21, 0.9)'; ctx.lineWidth = 5;
+                    ctx.shadowColor = '#facc15'; ctx.shadowBlur = 16;
+                    ctx.stroke();
+                    ctx.fillStyle = 'rgba(250, 204, 21, 0.12)';
+                    ctx.beginPath(); ctx.moveTo(0, 0); ctx.arc(0, 0, shieldR, -Math.PI / 2.1, Math.PI / 2.1); ctx.closePath(); ctx.fill();
+                    ctx.restore();
+                }
+
+                // 聖光騎士：蓄能反擊倒數條 (聖光劍氣視窗期)
+                if (this.aegisCounterTimer > 0) {
+                    const cBarW = 40, cBarH = 6, cRatio = this.aegisCounterTimer / 240;
+                    ctx.fillStyle = 'rgba(0,0,0,0.5)'; ctx.fillRect(-cBarW/2, -this.radius - 26, cBarW, cBarH);
+                    ctx.fillStyle = '#fef08a'; ctx.fillRect(-cBarW/2, -this.radius - 26, cBarW * cRatio, cBarH);
+                    ctx.strokeStyle = '#fff'; ctx.strokeRect(-cBarW/2, -this.radius - 26, cBarW, cBarH);
                 }
                 
                 if (this.damageReductionTimer > 0) {
@@ -1811,11 +1979,27 @@
                 }
 
                 let hitPlayer = false;
+                let absorbedByShield = false;
                 players.forEach(p => {
                     if (p.id !== this.ownerId && !p.isDead && p.invincibilityTimer <= 0) {
                         if (Math.hypot(this.x - p.x, this.y - p.y) < p.radius + this.radius) {
                             if (this.hitPlayers.includes(p.id)) return;
                             this.hitPlayers.push(p.id); hitPlayer = true;
+
+                            // 聖光騎士守護之盾：正面完全吸收子彈傷害
+                            if (p.isShieldUp && isFrontalHit(p, this.x, this.y)) {
+                                let absorbedAmt = this.damage;
+                                if (this.effect === 'blood_drop' && this.distanceTraveled > 100) {
+                                    const decayRatio = Math.min(1, (this.distanceTraveled - 100) / Math.max(1, this.maxRange - 100));
+                                    absorbedAmt = this.damage * (1 - 0.5 * decayRatio);
+                                }
+                                p.shieldAbsorbedDmg += absorbedAmt;
+                                absorbedByShield = true;
+                                createParticles(p.x, p.y, '#fef08a', 10);
+                                playSound('hit');
+                                return;
+                            }
+
                             if (this.effect === 'blood_drop') {
                                 let effectiveDmg = this.damage;
                                 if (this.distanceTraveled > 100) {
@@ -1838,6 +2022,7 @@
                 });
 
                 if (hitPlayer && !this.isPiercing) {
+                    if (absorbedByShield) return false;
                     if (this.effect === 'explode') triggerExplosion(this.x, this.y, 80, this.damage, this.ownerId, false, this.isUltimate ? 0.15 : 1.0);
                     else if (this.effect === 'hunter_ult') triggerHunterUltExplosion(this.x, this.y, 160, this.damage, this.ownerId); 
                     else if (this.effect === 'blizzard_proj') triggerBlizzardField(this.x, this.y, this.ownerId);
@@ -2134,6 +2319,12 @@
         function circleRectCollide(cx, cy, radius, rect) { const cX = Math.max(rect.x, Math.min(cx, rect.x + rect.w)), cY = Math.max(rect.y, Math.min(cy, rect.y + rect.h)); return Math.sqrt((cx - cX)**2 + (cy - cY)**2) < radius; }
         function pointInRect(px, py, rect) { return px >= rect.x && px <= rect.x + rect.w && py >= rect.y && py <= rect.y + rect.h; }
         function isPointInAnyWater(px, py) { return waters.some(wt => pointInRect(px, py, wt)); }
+        // 判斷攻擊來源座標是否位於防禦者面朝方向的正面180度扇形內 (聖光騎士守護之盾用)
+        function isFrontalHit(defender, sourceX, sourceY) {
+            const angToSource = Math.atan2(sourceY - defender.y, sourceX - defender.x);
+            const diff = Math.atan2(Math.sin(angToSource - defender.angle), Math.cos(angToSource - defender.angle));
+            return Math.abs(diff) <= Math.PI / 2;
+        }
         function pointToSegmentDist(px, py, x1, y1, x2, y2) { let dx = x2 - x1, dy = y2 - y1; if (dx === 0 && dy === 0) return Math.hypot(px - x1, py - y1); let t = ((px - x1) * dx + (py - y1) * dy) / (dx * dx + dy * dy); t = Math.max(0, Math.min(1, t)); return Math.hypot(px - (x1 + t * dx), py - (y1 + t * dy)); }
         function lineIntersectsLine(x1, y1, x2, y2, x3, y3, x4, y4) {
             let uA = ((x4-x3)*(y1-y3) - (y4-y3)*(x1-x3)) / ((y4-y3)*(x2-x1) - (x4-x3)*(y2-y1));
@@ -2449,5 +2640,4 @@
         renderMapSelector();
     </script>
 </body>
-</html>
 </html>
