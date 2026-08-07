@@ -333,11 +333,19 @@
     </div>
 
     <script>
-        // ==========================================
-        // 1. Web Audio API 音效合成器
+
+        
+           // ==========================================
+        // 1. Web Audio API 音效與背景音樂 (BGM) 控制
         // ==========================================
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         
+        // 📍【新增點 1：背景音樂 (BGM) 實體初始化】
+        // 請將 'path/to/your_bgm.mp3' 替換為您使用 Suno AI 等工具生成的音樂檔案路徑或 URL
+        const bgm = new Audio('https://cdn.jsdelivr.net/gh/a0908955077-creator/enochbrawlgame@main/Blade%20Clash%20Anthem.mp3');
+        bgm.loop = true;      // 設定為無限循環播放
+        bgm.volume = 0.35;    // 設定音量在 35%（避免蓋過技能攻擊音效）
+
         function playSound(type) {
             if (audioCtx.state === 'suspended') { audioCtx.resume(); }
             const osc = audioCtx.createOscillator(); const gain = audioCtx.createGain();
@@ -438,10 +446,10 @@
             { id: 'prisoner', name: '斷罪囚徒', emoji: '⛓️', maxHp: 5500, speed: 3.3, damage: 950, attackRange: 120, attackCd: 800, bulletSpeed: 0, reloadSpeed: 1500, ultRequirement: 2800, color: '#57534e', bulletColor: '#a8a29e', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E6%96%B7%E7%BD%AA%E5%9B%9A%E5%BE%92.jpg', atkName: '斷罪鐵拳', atkDesc: '手銬極近距扇形重擊，無法穿牆，攻擊帶有25%減傷。', ultName: '絕望衝鋒牢籠', ultDesc: '高速衝鋒，停下生成160px牢籠，敵人不可出且吸收子彈。' },
             { id: 'neptune', name: '滄海帝王', emoji: '🔱', maxHp: 4200, speed: 3.6, damage: 800, attackRange: 450, attackCd: 800, bulletSpeed: 12, reloadSpeed: 1200, ultRequirement: 6000, color: '#06b6d4', bulletColor: '#0891b2', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E6%B5%B7%E7%A5%9E.jpg', atkName: '潮汐蓄力波', atkDesc: '按住蓄力發射寬廣海浪(貫穿)，威力隨蓄力最高2倍。', ultName: '幻星鯊召喚', ultDesc: '召喚高血量幻星鯊，衝刺擊退並自動追擊撕咬擋子彈。' },
             { id: 'samira', name: '漠海舞姬', emoji: '💃', maxHp: 4000, speed: 4.0, damage: 500, attackRange: 350, attackCd: 500, bulletSpeed: 10, reloadSpeed: 1200, ultRequirement: 4000, color: '#eab308', bulletColor: '#fde047', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E6%BC%A0%E6%B5%B7%E8%88%9E%E5%A7%AC.jpg', atkName: '迴旋金沙刃', atkDesc: '擲出流沙月牙飛刃，去程貫穿敵人但無法穿牆，飛滿射程後自動折返並可穿牆貫穿。', ultName: '流沙漩渦', ultDesc: '原地展開華麗舞姿3秒(可移動+30%移速)，周圍180px範圍持續拉近敵人並造成傷害。' },
-            { id: 'yorkie', name: '迷你芙', emoji: '🐶', maxHp: 3400, speed: 4.2, damage: 400, attackRange: 100, attackCd: 700, bulletSpeed: 0, reloadSpeed: 1600, ultRequirement: 100, color: '#d97706', bulletColor: '#fef08a', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E8%BF%B7%E4%BD%A0%E8%8A%99.png', atkName: '迷你抓抓', atkDesc: '自身360度近距離爪擊造成400傷害，並附加2秒芙芙印記。命中充能34%大招。', ultName: '德芙衝刺', ultDesc: '高速衝鋒(期間50%減傷)造成500傷害，命中印記目標造成600傷害並立即刷新大招！' },
-            { id: 'vampire', name: '血魅伯爵', emoji: '🍷', maxHp: 2800, speed: 3.6, damage: 320, attackRange: 350, attackCd: 550, bulletSpeed: 11, reloadSpeed: 1200, ultRequirement: 2200, color: '#881337', bulletColor: '#e11d48', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E5%90%B8%E8%A1%80%E9%AC%BC.png', atkName: '血浪汲取', atkDesc: '朝面朝方向45度扇形依序噴射5滴血，近距離320傷害，最遠距離衰減至160。每滴命中永久偷取對手1%生命上限。', ultName: '夜幕蝠化', ultDesc: '化身群蝠絕對無敵2秒且移速+35%，結束時爆發150px範圍1300傷害，60%轉為自身治療！' },
+            { id: 'yorkie', name: '迷你芙', emoji: '🐶', maxHp: 3400, speed: 4.2, damage: 400, attackRange: 100, attackCd: 700, bulletSpeed: 0, reloadSpeed: 1600, ultRequirement: 100, color: '#d97706', bulletColor: '#fef08a', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E8%BF%B7%E4%BD%A0%E8%8A%99.png', atkName: '迷你抓抓', atkDesc: '自身360度近距離爪擊造成400傷害，並附加2秒芙芙印記。命中充能34%大招。', ultName: '德芙衝刺', ultDesc: '高速衝鋒(50%減傷)造成500傷害，命中印記目標造成600傷害並立即刷新大招！' },
+            { id: 'vampire', name: '血魅伯爵', emoji: '🍷', maxHp: 2800, speed: 3.6, damage: 320, attackRange: 350, attackCd: 550, bulletSpeed: 11, reloadSpeed: 1200, ultRequirement: 4800, color: '#881337', bulletColor: '#e11d48', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E5%90%B8%E8%A1%80%E9%AC%BC.png', atkName: '血浪汲取', atkDesc: '朝面朝方向45度扇形依序噴射5滴血，近距離280傷害，最遠距離衰減至140。每滴命中永久偷取對手1%生命上限。', ultName: '夜幕蝠化', ultDesc: '化身群蝠絕對無敵2秒且移速+35%，結束時爆發150px範圍1300傷害，60%轉為自身治療！' },
             { id: 'idol', name: '星光偶像', emoji: '🎤', maxHp: 3600, speed: 4.0, damage: 700, attackRange: 350, attackCd: 380, bulletSpeed: 10, reloadSpeed: 1100, ultRequirement: 3500, color: '#ec4899', bulletColor: '#f472b6', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E5%81%B6%E5%83%8F.jpg', atkName: '三拍子星光音符', atkDesc: '按1-2-3節奏連發！第1-2拍造成700傷害，第3拍觸發【高潮爆發】造成1050傷害！', ultName: '安可演唱會', ultDesc: '展開220px霓虹舞台3秒，瞬間魅惑範圍敵人1.3秒(無法攻擊+被迫走向自己)，並持續造成範圍傷害！' },
-            { id: 'paladin', name: '聖光騎士', emoji: '⚔️', maxHp: 5200, speed: 3.3, damage: 880, attackRange: 120, attackCd: 700, bulletSpeed: 0, reloadSpeed: 1100, ultRequirement: 4800, color: '#eab308', bulletColor: '#fef08a', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E8%81%96%E5%85%89%E9%A8%8E%E5%A3%AB.jpg', atkName: '聖劍斬擊', atkDesc: '面朝180度扇形橫掃880傷害(先0.4秒警示再劈砍)。每命中1次獲得1層聖盾餘暉(疊加3層，各+5%減傷+10%增傷)。', ultName: '守護之盾', ultDesc: '舉盾2.5秒正面免疫子彈與衝刺(移速-50%)！結束後4秒內普攻改為聖光劍氣(1000+50%吸收傷害)！' }
+            { id: 'paladin', name: '聖光騎士', emoji: '⚔️', maxHp: 5000, speed: 3.3, damage: 880, attackRange: 102 /* 聖劍斬擊半徑由170縮小40%調整為102 */, attackCd: 700, bulletSpeed: 0, reloadSpeed: 1100, ultRequirement: 5200, color: '#eab308', bulletColor: '#fef08a', imgUrl: 'https://raw.githubusercontent.com/a0908955077-creator/photo/refs/heads/main/%E8%81%96%E5%85%89%E9%A8%8E%E5%A3%AB.jpg', atkName: '聖劍斬擊', atkDesc: '面朝180度扇形橫掃880傷害(先0.4秒警示再劈砍)。每命中1次獲得1層聖盾餘暉(疊加3層，各+5%減傷+10%增傷)。', ultName: '守護之盾', ultDesc: '舉盾2.5秒正面免疫子彈與衝刺(移速-50%)！結束後下次普攻必定改為聖光劍氣(1000+50%吸收傷害)，無時間限制！' }
         ];
 
         const MAP_PRESETS = [
@@ -712,7 +720,7 @@
                 this.holyStacks = 0;
                 this.isSwordWindup = false; this.swordWindupTimer = 0; this.isSwordSwinging = false; this.swordSwingTimer = 0; this.swordSwingAngle = 0;
                 this.isShieldUp = false; this.shieldTimer = 0; this.shieldAbsorbedDmg = 0;
-                this.aegisCounterTimer = 0; this.aegisCounterDamage = 0;
+                this.aegisCounterReady = false; this.aegisCounterDamage = 0;
 
                 this.img = null;
                 if (brawler.imgUrl) {
@@ -821,7 +829,7 @@
                         this.isBatForm = false; this.batFormTimer = 0;
                         this.idolBeatCount = 0; this.charmTimer = 0; this.charmerId = null;
                         this.holyStacks = 0; this.isSwordWindup = false; this.swordWindupTimer = 0; this.isSwordSwinging = false; this.swordSwingTimer = 0;
-                        this.isShieldUp = false; this.shieldTimer = 0; this.shieldAbsorbedDmg = 0; this.aegisCounterTimer = 0; this.aegisCounterDamage = 0;
+                        this.isShieldUp = false; this.shieldTimer = 0; this.shieldAbsorbedDmg = 0; this.aegisCounterReady = false; this.aegisCounterDamage = 0;
                     }
                     return;
                 }
@@ -922,7 +930,9 @@
                     this.swordWindupTimer--;
                     if (this.swordWindupTimer <= 0) {
                         this.isSwordWindup = false; this.isSwordSwinging = true; this.swordSwingTimer = 12; // 200ms 揮砍
-                        this.swordSwingAngle = this.angle;
+                        // 注意：此處不可再將 swordSwingAngle 重設為 this.angle，
+                        // 攻擊方向必須沿用警示開始時鎖定的角度(於觸發攻擊當下設定)，
+                        // 避免玩家在0.4秒警示期間轉向造成「警示方位」與「實際劈砍方位」不一致的BUG。
                         const hitRadius = this.brawler.attackRange;
                         const targets = [];
                         players.forEach(p => { if (p.id !== this.id && !p.isDead && p.invincibilityTimer <= 0) targets.push(p); });
@@ -948,17 +958,16 @@
                 }
                 if (this.isSwordSwinging) { this.swordSwingTimer--; if (this.swordSwingTimer <= 0) this.isSwordSwinging = false; }
 
-                // 聖光騎士：舉盾倒數 → 蓄能反擊窗口
+                // 聖光騎士：舉盾倒數 → 蓄能反擊 (無時間限制，直到下次攻擊觸發為止)
                 if (this.isShieldUp) {
                     this.shieldTimer--;
                     if (this.shieldTimer <= 0) {
                         this.isShieldUp = false;
-                        this.aegisCounterTimer = 240; // 反擊窗口 4 秒
+                        this.aegisCounterReady = true; // 無時間限制，下次普攻必定觸發聖光劍氣
                         this.aegisCounterDamage = 1000 + this.shieldAbsorbedDmg * 0.5;
                         createFloatingText(this.x, this.y - 55, `⚔️ 蓄能反擊! (+${Math.round(this.shieldAbsorbedDmg * 0.5)})`, "#fef08a");
                     }
                 }
-                if (this.aegisCounterTimer > 0) { this.aegisCounterTimer--; if (this.aegisCounterTimer <= 0) this.aegisCounterDamage = 0; }
 
                 const isRegenActive = (Date.now() - this.lastDamageTime > 3500) && (Date.now() - this.lastShootTime > 3500);
                 if (isRegenActive) {
@@ -1320,11 +1329,11 @@
                         this.idolBeatCount = (beatIndex + 1) % 3;
                         playSound('shoot');
                     } else if (this.brawler.id === 'paladin') {
-                        if (this.aegisCounterTimer > 0) {
-                            // 蓄能反擊窗口內：普攻改為聖光劍氣 (貫穿障礙物，寬度+50%，僅限一發)
+                        if (this.aegisCounterReady) {
+                            // 無時間限制：下次普攻必定觸發聖光劍氣 (貫穿障礙物，寬度+50%，僅限一發)
                             bullets.push(new Bullet(this.id, this.x, this.y, this.angle, 14, this.aegisCounterDamage, 400, this.brawler.bulletColor, 30, true, 'holy_wave'));
                             createFloatingText(this.x, this.y - 45, "⚔️ 聖光劍氣!", "#fef08a");
-                            this.aegisCounterTimer = 0; this.aegisCounterDamage = 0; // 發動後立即結束視窗，僅能發動一次
+                            this.aegisCounterReady = false; this.aegisCounterDamage = 0; // 發動後立即消耗，僅能發動一次
                         } else {
                             // 一般攻擊：0.4秒警示後才揮砍
                             this.isSwordWindup = true; this.swordWindupTimer = 24; this.swordSwingAngle = this.angle;
@@ -1417,7 +1426,6 @@
                         this.vortexTickTimer = 15; // 每 0.25 秒 (15 幀) 觸發一次傷害
                         createFloatingText(this.x, this.y - 65, "🌪️ 流沙漩渦!", "#eab308");
                         createParticles(this.x, this.y, '#eab308', 25);
-                        
                     } else if (this.brawler.id === 'yorkie') {
                         this.isYorkieDashing = true;
                         this.yorkieUltCooldown = 20; // 大招使用間隔縮短，避免衝刺結束瞬間又立即觸發
@@ -1740,12 +1748,14 @@
                     ctx.restore();
                 }
 
-                // 聖光騎士：蓄能反擊倒數條 (聖光劍氣視窗期)
-                if (this.aegisCounterTimer > 0) {
-                    const cBarW = 40, cBarH = 6, cRatio = this.aegisCounterTimer / 240;
-                    ctx.fillStyle = 'rgba(0,0,0,0.5)'; ctx.fillRect(-cBarW/2, -this.radius - 26, cBarW, cBarH);
-                    ctx.fillStyle = '#fef08a'; ctx.fillRect(-cBarW/2, -this.radius - 26, cBarW * cRatio, cBarH);
-                    ctx.strokeStyle = '#fff'; ctx.strokeRect(-cBarW/2, -this.radius - 26, cBarW, cBarH);
+                // 聖光騎士：聖光劍氣就緒提示 (無時間限制，持續顯示直到觸發)
+                if (this.aegisCounterReady) {
+                    const readyPulse = 1 + Math.sin(Date.now() / 180) * 0.15;
+                    ctx.save();
+                    ctx.font = `${16 * readyPulse}px Arial`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+                    ctx.shadowColor = '#facc15'; ctx.shadowBlur = 8;
+                    ctx.fillText('⚔️', 0, -this.radius - 28);
+                    ctx.restore();
                 }
                 
                 if (this.damageReductionTimer > 0) {
@@ -2079,6 +2089,53 @@
                     if (Math.random() < 0.4) createParticles(this.x, this.y, '#fde047', 1);
                     return;
                 }
+                if (this.effect === 'holy_wave') {
+                    // 聖光騎士專屬：聖光劍氣 (金黃長劍 + 劍氣拖尾)
+                    ctx.save(); ctx.translate(this.x, this.y); ctx.rotate(Math.atan2(this.vy, this.vx) + Math.PI / 2);
+
+                    // 劍氣拖尾 (半透明延伸光帶)
+                    const trailGrad = ctx.createLinearGradient(0, this.radius * 1.2, 0, -this.radius * 3.2);
+                    trailGrad.addColorStop(0, 'rgba(250, 204, 21, 0.55)');
+                    trailGrad.addColorStop(1, 'rgba(250, 204, 21, 0)');
+                    ctx.fillStyle = trailGrad;
+                    ctx.beginPath();
+                    ctx.moveTo(-this.radius * 0.35, this.radius * 1.2);
+                    ctx.lineTo(this.radius * 0.35, this.radius * 1.2);
+                    ctx.lineTo(this.radius * 0.12, -this.radius * 3.2);
+                    ctx.lineTo(-this.radius * 0.12, -this.radius * 3.2);
+                    ctx.closePath(); ctx.fill();
+
+                    // 劍身
+                    ctx.shadowColor = '#fef08a'; ctx.shadowBlur = 14;
+                    ctx.fillStyle = '#facc15';
+                    ctx.beginPath();
+                    ctx.moveTo(0, -this.radius * 1.6);
+                    ctx.lineTo(this.radius * 0.22, -this.radius * 0.5);
+                    ctx.lineTo(this.radius * 0.22, this.radius * 0.9);
+                    ctx.lineTo(-this.radius * 0.22, this.radius * 0.9);
+                    ctx.lineTo(-this.radius * 0.22, -this.radius * 0.5);
+                    ctx.closePath(); ctx.fill();
+                    ctx.strokeStyle = '#fff7ed'; ctx.lineWidth = 1.5; ctx.stroke();
+
+                    // 十字護手與劍柄
+                    ctx.shadowBlur = 0;
+                    ctx.fillStyle = '#b45309';
+                    ctx.fillRect(-this.radius * 0.55, this.radius * 0.9, this.radius * 1.1, this.radius * 0.18);
+                    ctx.fillRect(-this.radius * 0.12, this.radius * 0.9, this.radius * 0.24, this.radius * 0.55);
+
+                    // 劍刃高光
+                    ctx.strokeStyle = 'rgba(255,255,255,0.75)'; ctx.lineWidth = 1;
+                    ctx.beginPath(); ctx.moveTo(0, -this.radius * 1.5); ctx.lineTo(0, this.radius * 0.85); ctx.stroke();
+                    ctx.restore();
+
+                    // 金色光粒特效
+                    if (Math.random() < 0.6) createParticles(this.x, this.y, '#facc15', 1);
+                    // 羽毛飄落特效
+                    if (Math.random() < 0.18) {
+                        particles.push({ type: 'feather', x: this.x + (Math.random() * 16 - 8), y: this.y + (Math.random() * 10 - 5), vx: (Math.random() * 0.6 - 0.3), vy: 0.6 + Math.random() * 0.5, rot: Math.random() * Math.PI * 2, rotSpeed: (Math.random() * 0.1 - 0.05), life: 50, maxLife: 50 });
+                    }
+                    return;
+                }
                 if (this.effect === 'blood_drop') {
                     // 血魅伯爵專屬：高壓血滴造型
                     ctx.save(); ctx.translate(this.x, this.y); ctx.rotate(Math.atan2(this.vy, this.vx) + Math.PI / 2);
@@ -2314,6 +2371,23 @@
                     }
                     ctx.restore();
                 }
+                else if (p.type === 'feather') {
+                    // 聖光劍氣尾隨的羽毛飄落特效
+                    p.life--;
+                    if (p.life <= 0) { particles.splice(i, 1); continue; }
+                    p.x += p.vx; p.y += p.vy; p.rot += p.rotSpeed;
+                    const t = p.life / p.maxLife;
+                    ctx.save(); ctx.globalAlpha = t * 0.85; ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+                    ctx.fillStyle = '#fef9c3';
+                    ctx.beginPath();
+                    ctx.moveTo(0, -6);
+                    ctx.quadraticCurveTo(3.2, 0, 0, 6);
+                    ctx.quadraticCurveTo(-3.2, 0, 0, -6);
+                    ctx.closePath(); ctx.fill();
+                    ctx.strokeStyle = 'rgba(234,179,8,0.6)'; ctx.lineWidth = 0.6;
+                    ctx.beginPath(); ctx.moveTo(0, -6); ctx.lineTo(0, 6); ctx.stroke();
+                    ctx.restore();
+                }
             }
         }
         function circleRectCollide(cx, cy, radius, rect) { const cX = Math.max(rect.x, Math.min(cx, rect.x + rect.w)), cY = Math.max(rect.y, Math.min(cy, rect.y + rect.h)); return Math.sqrt((cx - cX)**2 + (cy - cY)**2) < radius; }
@@ -2539,11 +2613,15 @@
 
         document.getElementById('start-btn').onclick = startGame;
         document.getElementById('restart-btn').onclick = () => { document.getElementById('game-over').classList.add('hidden'); startGame(); };
-        document.getElementById('menu-btn').onclick = () => { document.getElementById('game-over').classList.add('hidden'); document.getElementById('start-menu').classList.remove('hidden'); updateLobbyUI(); };
+        document.getElementById('menu-btn').onclick = () => { document.getElementById('game-over').classList.add('hidden'); document.getElementById('start-menu').classList.remove('hidden'); bgm.pause();updateLobbyUI(); };
 
         function startGame() {
             window.focus();
             if (audioCtx.state === 'suspended') audioCtx.resume();
+            bgm.currentTime = 0; // 從頭開始播放
+            bgm.play().catch(e => console.log("等待玩家點擊互動後播放 BGM:", e));
+
+            
             document.getElementById('start-menu').classList.add('hidden');
             
             const b1 = BRAWLERS[p1SelectedIdx], b2 = BRAWLERS[p2SelectedIdx];
